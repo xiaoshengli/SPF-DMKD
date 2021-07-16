@@ -16,6 +16,8 @@ Or can directly use the compiled file SPF included in the folder.
 
 \[datasetname\] is the name of the dataset to run, the user needs to place a folder named with the \[datasetname\] and the folder contains a training file \[datasetname\]_TRAIN and a testing file \[datasetname\]_TEST (The [UCR-Archive](https://www.cs.ucr.edu/~eamonn/time_series_data_2018/) format). \[ensemble_size\] is the ensemble size. Please see the FaceFour example contained in the directory.
 
+The datasets used in the article are from the [UCR-Archive](https://www.cs.ucr.edu/~eamonn/time_series_data_2018/). Each dataset in the archive contains a training set and a testing set. We fuse both sets and use all the data in the experiment. Some datasets contain varying-length time series. We append zeros at the end of series to make all time series in a dataset have the same length. The NaN values in some datasets are replaced by the respective interpolation values.
+
 ## Example
 
 `./SPF FaceFour 100`
